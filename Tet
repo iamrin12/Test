@@ -1,0 +1,35 @@
+GameName = "Spin For FREE UGC" 
+
+tab1name = "Main" 
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))() 
+
+local GameName = Library:NewWindow(GameName) 
+
+local Tab1 = GameName:NewSection(tab1name) 
+
+Tab1:CreateToggle("Auto Spin", function(value)
+_G.name = value
+while _G.name == true do
+_G.Lol = true
+while _G.Lol == true do
+game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("startspin"):FireServer()
+wait(0.4) 
+end
+wait(5) 
+end
+end) 
+
+Tab1:CreateToggle("Inf Spin", function(value)
+_G.name = value
+while _G.name == true do
+while task.wait(0.4) do game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("startspin"):FireServer()
+end
+wait(5) 
+end
+end) 
+
+Tab1:CreateButton("Anti Afk", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+end)
+local Tab2 = GameName:NewSection("justrinn")
