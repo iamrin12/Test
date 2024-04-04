@@ -1,0 +1,63 @@
+GameName = "Game Script" 
+
+tab1name = "Main" 
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))() 
+
+local GameName = Library:NewWindow(GameName) 
+
+local Tab1 = GameName:NewSection(tab1name) 
+
+Tab1:CreateButton("Infinite Yield", function(value)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end) 
+
+Tab1:CreateButton("Remotespy Mobile", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RS/main/SimpleSpyMobile"))()
+end) 
+
+Tab1:CreateButton("Dark Dex", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end) 
+
+Tab1:CreateButton("PlayerHub v1", function(value) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimiteds.lua"))()
+end) 
+
+Tab1:CreateButton("PlayerHub v2", function(value)
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubIngameUgcLimitedsV2.lua')))()
+end) 
+local Tab2 = GameName:NewSection("Script") 
+
+Tab2:CreateButton("Cframe", function(value)
+local plyr = game.Players.LocalPlayer
+local chr = plyr.Character 
+
+setclipboard(("game.Players.LocalPlayer.Character:PivotTo(CFrame.new(%s))"):format(tostring(chr:GetPrimaryPartCFrame())))
+end) 
+
+Tab2:CreateButton("AdonisChecker", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Favorable/main/AdonisChecker.Lua",true))()
+end) 
+
+Tab2:CreateButton("ProximityPrompt", function(value)
+for _, v in next, workspace:GetDescendants() do
+if v:IsA("ProximityPrompt") then
+v.HoldDuration = 0
+end
+end
+end)
+local Tab3 = GameName:NewSection("Misc") 
+
+Tab3:CreateButton("UGC Limited Codes", function(value)
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/TrueStrikes/redblue/main/cacc.lua")))()
+end) 
+
+Tab3:CreateButton("Anti Afk", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+end) 
+
+Tab3:CreateButton("ServerHop", function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
+end)
+local Tab2 = GameName:NewSection("Game Script")
